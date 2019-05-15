@@ -41,6 +41,7 @@ http://127.0.0.1:8000/wp-json/wp/v2/posts
 
 ### Para visualizar um post específico
 http://127.0.0.1:8000/wp-json/wp/v2/{id}
+
 Onde {id} é o ID do Post que você precisa.
 
 ### Para obter uma lista de Páginas
@@ -93,9 +94,9 @@ Os elementos de uma categoria ou tag, são consideradas pelo WordPress como term
 
 ### Requisitando uma Categoria ou tag de determinado post:
 
-https://demo.wp-api.org/wp-json/wp/v2/posts/{id_do_post}/terms/category/
+http://127.0.0.1:8000/wp-json/wp/v2/posts/{id_do_post}/terms/category/
 
-https://demo.wp-api.org/wp-json/wp/v2/posts/{id_do_post}/terms/tag/
+http://127.0.0.1:8000/wp-json/wp/v2/posts/{id_do_post}/terms/tag/
 
 ### Obtendo uma lista de Categorias
 Nossa categoria modelo (Marketing) deverá aparecer aqui
@@ -103,7 +104,7 @@ Nossa categoria modelo (Marketing) deverá aparecer aqui
 http://127.0.0.1:8000/wp-json/wp/v2/terms/category
 
 ### Lista de Tags
-https://seusite.com.br/wp-json/wp/v2/terms/tag
+http://127.0.0.1:8000/wp-json/wp/v2/terms/tag
 
 ### Lidando e visualizando conteúdo com Custom Post Types:
 
@@ -112,6 +113,7 @@ Por padrão, o WP-API não autoriza a visualização direta de CPT. Para autoriz
 > show_in_rest => true
 
 Caso você tenha feito corretamente, o endereço abaixo vai listar os posts relacionados àquele CPT:
+
 http://127.0.0.1:8000/wp-json/wp/v2/{nome_do_cpt}
 
 ### Usando o ACF? Você ainda está na zona de conforto!
@@ -152,35 +154,34 @@ Quando a API REST foi mesclada no núcleo do WordPress, o parâmetro de consulta
 Parâmetros de consulta primários devem ser usados ​​sempre que possível. No entanto, o plug-in [rest-filter](https://github.com/wp-api/rest-filter) restaura a capacidade de transmitir valores de *?filter* arbitrários na solicitação da API, se necessário.
 
 
-
 ## Referencias
 
-https://blog.apiki.com/wp-rest-api-content-endpoints-wordpress-4-7/
-https://medium.com/the-lab-of-codes/wordpress-sem-php-bem-vindo-ao-conceito-de-api-156cb80de167
-http://www.matera.com/blog/post/como-customizar-o-response-da-api-rest-do-wordpress
-https://devblog.drall.com.br/como-acessar-a-rest-api-json-do-wordpress
-https://make.wordpress.org/core/2015/10/28/rest-api-welcome-the-infrastructure-to-core/
-https://www.hostinger.com.br/tutoriais/guia-iniciante-api-rest-wordpress/
-https://tableless.com.br/rest-json-wp-api-e-o-futuro-do-wordpress/
-https://developer.wordpress.org/rest-api/extending-the-rest-api/
-https://www.wpsuperstars.net/wordpress-rest-api/
-https://developer.wordpress.org/rest-api/reference/
-https://betomuniz.com/blog/cors-e-alem/
-https://testautomationresources.com/api-testing/differences-web-services-api/
-https://blog.vertigo.com.br/o-que-e-api-entenda-de-uma-maneira-simples/
-https://www.chromium.org/Home/chromium-security/corb-for-developers
-https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Controle_Acesso_CORS
-https://developer.mozilla.org/en-US/docs/Glossary/same-origin_policy
-https://www.kaspersky.com.br/blog/35c3-spectre-meltdown-2019/11289/
-https://pt.wikipedia.org/wiki/Cross-site_request_forgery
-https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types
-https://betomuniz.com/blog/cors-e-alem/
-https://www.tecmundo.com.br/programacao/1807-o-que-e-api-.htm
-https://blog.algaworks.com/4-conceitos-sobre-rest-que-qualquer-desenvolvedor-precisa-conhecer/
-https://sensedia.com/blog/apis/o-que-sao-apis-parte-1-introducao/
-https://scriptcerto.com.br/blogwordpress/como-usar-a-api-http-do-wordpress/
-https://gist.github.com/danielpataki/c7e98b9596bfb6d085b0#file-simple-get-php
-https://www.sitepoint.com/the-wordpress-http-api/
-https://devblog.drall.com.br/como-acessar-a-rest-api-json-do-wordpress
-https://www.isbrasil.info/blog/criando-uma-api-rest-para-wordpress.html
-https://kinsta.com/blog/wordpress-http-api-part-1/
+ - https://blog.apiki.com/wp-rest-api-content-endpoints-wordpress-4-7/
+ - https://medium.com/the-lab-of-codes/wordpress-sem-php-bem-vindo-ao-conceito-de-api-156cb80de167
+ - http://www.matera.com/blog/post/como-customizar-o-response-da-api-rest-do-wordpress
+ - https://devblog.drall.com.br/como-acessar-a-rest-api-json-do-wordpress
+ - https://make.wordpress.org/core/2015/10/28/rest-api-welcome-the-infrastructure-to-core/
+ - https://www.hostinger.com.br/tutoriais/guia-iniciante-api-rest-wordpress/
+ - https://tableless.com.br/rest-json-wp-api-e-o-futuro-do-wordpress/
+ - https://developer.wordpress.org/rest-api/extending-the-rest-api/
+ - https://www.wpsuperstars.net/wordpress-rest-api/
+ - https://developer.wordpress.org/rest-api/reference/
+ - https://betomuniz.com/blog/cors-e-alem/
+ - https://testautomationresources.com/api-testing/differences-web-services-api/
+ - https://blog.vertigo.com.br/o-que-e-api-entenda-de-uma-maneira-simples/
+ - https://www.chromium.org/Home/chromium-security/corb-for-developers
+ - https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Controle_Acesso_CORS
+ - https://developer.mozilla.org/en-US/docs/Glossary/same-origin_policy
+ - https://www.kaspersky.com.br/blog/35c3-spectre-meltdown-2019/11289/
+ - https://pt.wikipedia.org/wiki/Cross-site_request_forgery
+ - https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types
+ - https://betomuniz.com/blog/cors-e-alem/
+ - https://www.tecmundo.com.br/programacao/1807-o-que-e-api-.htm
+ - https://blog.algaworks.com/4-conceitos-sobre-rest-que-qualquer-desenvolvedor-precisa-conhecer/
+ - https://sensedia.com/blog/apis/o-que-sao-apis-parte-1-introducao/
+ - https://scriptcerto.com.br/blogwordpress/como-usar-a-api-http-do-wordpress/
+ - https://gist.github.com/danielpataki/c7e98b9596bfb6d085b0#file-simple-get-php
+ - https://www.sitepoint.com/the-wordpress-http-api/
+ - https://devblog.drall.com.br/como-acessar-a-rest-api-json-do-wordpress
+ - https://www.isbrasil.info/blog/criando-uma-api-rest-para-wordpress.html
+ - https://kinsta.com/blog/wordpress-http-api-part-1/
